@@ -1,0 +1,8 @@
+title: Declaration of Independence
+description: Show the Declaration of Independence in a Star Wars scrolling style
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
