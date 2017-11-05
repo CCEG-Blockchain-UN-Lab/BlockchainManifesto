@@ -80,11 +80,11 @@ h1
 	text-shadow: -0.2vw -0.2vw 0 #b0a100, 0.2vw -0.2vw 0 #b0a100, -0.2vw 0.2vw 0 #b0a100, 0.2vw 0.2vw 0 #b0a100;
 	opacity: 0;
 	z-index: 1;
-	-webkit-animation: logo 5s ease-out 6.25s;
-	-moz-animation: logo 5s ease-out 6.25s;
-	-ms-animation: logo 5s ease-out 6.25s;
-	-o-animation: logo 5s ease-out 6.25s;
-	animation: logo 5s ease-out 6.25s;
+	-webkit-animation: logo 5s ease-out 0s;
+	-moz-animation: logo 5s ease-out 0s;
+	-ms-animation: logo 5s ease-out 0s;
+	-o-animation: logo 5s ease-out 0s;
+	animation: logo 5s ease-out 0s;
 }
 
 h1 sub
