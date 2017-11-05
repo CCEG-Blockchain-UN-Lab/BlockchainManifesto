@@ -1,0 +1,17 @@
+language: node_js
+branches:
+  except:
+  - gh-pages
+before_install:
+- openssl aes-256-cbc -K $encrypted_44f232d21a6d_key -iv $encrypted_44f232d21a6d_iv
+  -in id_rsa.enc -out id_rsa -d
+after_sucess:
+  - npm run gh-pages-travis
+env:
+  global:
+    - DEPLOY_BRANCH="master"
+    - SOURCE_DIR="dist"
+    - TARGET_BRANCH="gh-pages"
+    - SSH_KEY="id_rsa"
+    - GIT_NAME="travis"
+    - GIT_EMAIL="deploy@travis-ci.org"
