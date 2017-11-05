@@ -4,8 +4,6 @@
   "description": "Shows the Blockchain Manifesto in a Star Wars scrolling style.",
   "main": "index.js",
   "dependencies": {
-    "lodash": "^4.17.4",
-    "simple-audio": "^1.0.1"
   },
   "devDependencies": {
     "css-loader": "^0.28.7",
