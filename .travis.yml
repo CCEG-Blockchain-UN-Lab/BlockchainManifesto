@@ -1,4 +1,6 @@
 language: node_js
+node_js:
+  - "node"
 branches:
   except:
   - gh-pages
@@ -15,3 +17,4 @@ env:
     - SSH_KEY="id_rsa"
     - GIT_NAME="travis"
     - GIT_EMAIL="deploy@travis-ci.org"
+cache: yarn
