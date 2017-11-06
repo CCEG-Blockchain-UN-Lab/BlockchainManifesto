@@ -16,7 +16,7 @@
   "scripts": {
     "gh-pages-travis": "gh-pages-travis",
     "build": "webpack",
-    "start": "node node_modules/.bin/webpack-dev-server --content-base app",
+    "start": "node node_modules/.bin/webpack-dev-server --content-base app"
   },
   "repository": {
     "type": "git",
