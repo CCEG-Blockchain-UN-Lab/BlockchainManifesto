@@ -15,27 +15,38 @@ var load = (function() {
                 var attr = 'src';
 
                 // Important success and error for the promise
-                element.onload = function() {
-                    resolve(element);
-                };
+                switch(tag){
+                default:
+                    element.onload = function() {
+                        console.log('onload');
+                        resolve(element);
+                    };
+                    break;
+                case 'audio':
+                    element.oncanplay = function() {
+                        console.log('oncanplay');
+                        resolve(element);
+                    };
+                }
                 element.onerror = function() {
+                    console.log('onerror');
                     reject(url);
                 };
 
+
                 // Need to set different attributes depending on tag type
                 switch(tag) {
-                    case 'script':
-                        element.async = true;
-                        break;
-                    case 'link':
-                        element.type = 'text/css';
-                        element.rel = 'stylesheet';
-                        attr = 'href';
-                        parent = 'head';
-                        break;
-                    case 'audio':
-                        element.type = 'audio/mpeg';
-                        resolve(element);
+                case 'script':
+                    element.async = true;
+                    break;
+                case 'link':
+                    element.type = 'text/css';
+                    element.rel = 'stylesheet';
+                    attr = 'href';
+                    parent = 'head';
+                    break;
+                case 'audio':
+                    element.type = 'audio/mpeg';
                 }
 
                 // // Inject into document to kick off loading
