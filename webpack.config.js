@@ -17,7 +17,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|svg|jpg|gif)$/,
+                test: /\.(png|svg|jpg|gif|mp3)$/,
                 use: [
                     'file-loader'
                 ]
@@ -28,7 +28,6 @@ module.exports = {
         new CopyWebpackPlugin([
             // {output}/file.txt
             { from: './app/index.html' },
-            { from: './app/mainTheme.mp3' },
 
             // // equivalent
             // 'from/file.txt',
